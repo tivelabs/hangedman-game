@@ -1,3 +1,3 @@
-const { hangedManUtils } = require('./src/util/hangedManUtils.js');
+const { hangedManUtils } = require("./src/util/hangedManUtils.js");
 
-module.exports = hangedManUtils;
+exports.hangedManUtils = hangedManUtils;
