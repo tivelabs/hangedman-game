@@ -1,7 +1,7 @@
 {
-  "name": "hangedman-game",
+  "name": "@natalynanda/hmgame",
   "version": "0.1.0",
-  "description": "",
+  "description": "## Installation",
   "type": "module",
   "main": "app.js",
   "scripts": {
@@ -9,8 +9,8 @@
     "test": "jest"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Nataly Nanda Huanca Patzi",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.20.7",
     "@babel/preset-env": "^7.20.2",
@@ -19,5 +19,16 @@
   },
   "dependencies": {
     "colors": "^1.4.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tivelabs/hangedman-game.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tivelabs/hangedman-game/issues"
+  },
+  "homepage": "https://github.com/tivelabs/hangedman-game#readme"
 }
