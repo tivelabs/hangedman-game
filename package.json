@@ -1,9 +1,9 @@
 {
-  "name": "@natalynanda/hmgame",
+  "name": "@tivelabs/hangedman-game",
   "version": "0.1.0",
   "description": "## Installation",
   "type": "module",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "start": "NODE_OPTIONS='--experimental-specifier-resolution=node' node src/app.js",
     "test": "jest"
