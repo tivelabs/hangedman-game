@@ -1,5 +1,5 @@
-import arrayUtils from "../util/arrayUtils";
-import stringUtils from "../util/stringUtils";
+import arrayUtils from "../util/arrayUtils.js";
+import stringUtils from "../util/stringUtils.js";
 
 const ATTEMPTS_QUANTITY = 3;
 

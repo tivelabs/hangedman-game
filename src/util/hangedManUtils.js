@@ -1,7 +1,7 @@
-import HangedMan from "../model/hangedMan";
-import arrayUtils from "./arrayUtils";
-import optionUtils from "./optionUtils";
-import stringUtils from "./stringUtils";
+import HangedMan from "../model/hangedMan.js";
+import arrayUtils from "./arrayUtils.js";
+import optionUtils from "./optionUtils.js";
+import stringUtils from "./stringUtils.js";
 
 const hangedManUtils = {
   initHangedMan(category, level) {

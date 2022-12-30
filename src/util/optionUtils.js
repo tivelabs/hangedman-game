@@ -1,4 +1,4 @@
-import OptionMenu from "../model/optionMenu";
+import OptionMenu from "../model/optionMenu.js";
 
 const optionUtils = {
     initCategoryOptions() {
