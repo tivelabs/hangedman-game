@@ -1,6 +1,6 @@
 
-import animals from "../data/animals_english";
-import numbers from "../data/numbers_english";
+import animals from "../data/animals_english.js";
+import numbers from "../data/numbers_english.js";
 const arrayUtils = {
     insertWordInArrayByIndexPosition(answer, letter, indexes) {
       indexes.forEach(index => {
