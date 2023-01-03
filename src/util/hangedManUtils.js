@@ -11,6 +11,10 @@ const hangedManUtils = {
     const answer = arrayUtils.fillAnswerWithUnderscoreLetters(word);
     return new HangedMan(word, answer, 0, true);
   },
+  play(hangedMan, letter) {
+    hangedMan.setWordInserted(letter);
+    return hangedMan;
+  }
 };
 
 export default hangedManUtils;

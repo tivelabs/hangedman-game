@@ -25,7 +25,7 @@ const main = async() => {
 
     do {
         if(hangedMan && hangedMan.isGameStarted()) {
-            messages.showUnderscore(hangedMan.answer, hangedMan.attemptsFail);
+            messages.showUnderscore(hangedMan.answer, hangedMan.getAttemptsFiled());
             const letter = await inputs.insertLetter();
             hangedMan.setWordInserted(letter);
             if(!hangedMan.isWinner()) {
@@ -39,7 +39,7 @@ const main = async() => {
     }
 
     if(hangedMan && hangedMan.isLost()) {
-        messages.showLoserMessage(hangedMan.answer, hangedMan.attemptsFail, hangedMan.word);
+        messages.showLoserMessage(hangedMan.answer, hangedMan.getAttemptsFiled(), hangedMan.getWord());
     }
     
 }
