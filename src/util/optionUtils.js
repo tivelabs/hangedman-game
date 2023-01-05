@@ -7,7 +7,7 @@ const optionUtils = {
         return [animalOpt, numberOpt];
     },
     initLevelOptions() {
-        const low = new OptionMenu('level', '1', 'Low');
+        const low = new OptionMenu('level', '1', 'Easy');
         const medium = new OptionMenu('level', '2', 'Medium');
         const hard = new OptionMenu('level', '3', 'Hard');
         return [low, medium, hard];
