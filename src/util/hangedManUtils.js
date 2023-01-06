@@ -12,7 +12,7 @@ const hangedManUtils = {
     return new HangedMan(word, answer, 0, true);
   },
   play(hangedMan, letter) {
-    hangedMan.setWordInserted(letter);
+    hangedMan.setWordInserted(letter.toUpperCase());
     return hangedMan;
   }
 };

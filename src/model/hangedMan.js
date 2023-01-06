@@ -23,7 +23,7 @@ class HangedMan {
     }
 
     isLost = () => {
-        const lost = this.#attemptsFail === ATTEMPTS_QUANTITY;
+        const lost = this.#attemptsFail >= ATTEMPTS_QUANTITY;
         this.#gameStarted = !lost;
         return lost;
     }
