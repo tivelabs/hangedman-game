@@ -13,7 +13,7 @@ describe('hangedMan test', () => {
     });
     it('test set word inserted', () => {
         const hangedMan = new HangedMan('ALLIGATOR', ['_', 'L', 'L', 'I', 'G', '_', 'T', 'O', 'R'], 0, true);
-        hangedMan.setWordInserted('A');
+        hangedMan.play('A');
         expect(hangedMan.answer).toEqual(['A', 'L', 'L', 'I', 'G', 'A', 'T', 'O', 'R']);
     });
   });

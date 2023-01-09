@@ -1,5 +1,6 @@
 import animals from "../data/animals_english.js";
 import numbers from "../data/numbers_english.js";
+import categories from "../helpers/categories.js";
 import stringUtils from "./stringUtils.js";
 
 const UNDERSCORE_CHAR = '_';
@@ -14,10 +15,10 @@ const arrayUtils = {
     getItemsListByType (category, level) {
         let itemsList = [];
         switch (category) {
-            case 'Animals':
+            case categories.animals:
                 itemsList = animals.filter(e => stringUtils.getLevel(e.name) === level);
                 break;
-            case 'Numbers':
+            case categories.numbers:
                 itemsList = numbers.filter(e => stringUtils.getLevel(e.name) === level);
                 break;
             default:
@@ -29,7 +30,7 @@ const arrayUtils = {
     fillAnswerWithUnderscoreLetters(word) {
         let answer = [];
         const myArray = word.split('');
-        myArray.forEach(e => {
+        myArray.forEach(_ => {
             answer.push(UNDERSCORE_CHAR)
         })
         return answer;

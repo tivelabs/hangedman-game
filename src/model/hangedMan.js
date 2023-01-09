@@ -32,13 +32,14 @@ class HangedMan {
         return this.#gameStarted;
     }
 
-    setWordInserted = (letter) => {
+    play = (letter) => {
         const indexes = stringUtils.getListIndexPosition(this.#word, letter);
         if(indexes.length > 0) {
           this.answer = arrayUtils.insertWordInArrayByIndexPosition(this.answer, letter, indexes);
         } else {
             this.#addAttemptFiles();
         }
+        return this;
     }
 
     #addAttemptFiles = () => {

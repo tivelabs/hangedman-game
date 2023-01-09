@@ -27,7 +27,7 @@ const main = async() => {
         if(hangedMan && hangedMan.isGameStarted()) {
             messages.showUnderscore(hangedMan.answer, hangedMan.getAttemptsFiled());
             const letter = await inputs.insertLetter();
-            hangedMan.setWordInserted(letter);
+            hangedMan.play(letter);
             if(!hangedMan.isWinner()) {
                 hangedMan.isLost();
             }
