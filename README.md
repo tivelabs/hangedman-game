@@ -1,39 +1,72 @@
-# PACKAGE hangedman-game
+# hangedman-game
 
-## How to install
+## How to install hangedman-game library
+
+- To install hangedman-game library in your project just run the following command:
 
 ```
 npm i @tive-labs/hangedman-game;
 
 ```
 
-## How to use
+## How to use hangedman-game library
 
-### Init play, call this method for get the aleatory word
-### Send two parameters (category, level)
-### Categories: 1 - animals, 2 - numbers
-### Levels: 1 - low, 2 - medium, 3 - hard
+1. ### Parameters
+- This game support two categories: 1 - animals, 2 - numbers
+- This game support three levels: 1 - easy, 2 - medium, 3 - hard
 
-```
-const word = initHangedMan('1', '1');
+2. ### Import the library
 
 ```
-
-### Play, sending a letter
-### This funcion will return this values
-### Win - When you win
-### Lost - When you lost
-### _ A _ - The word with the correct position of your letter, for continue.
-
-
-```
-const writeLetter = play('A');
+import {initHangedMan} from "@tive-labs/hangedman-game";
 
 ```
 
+3. ### Create an instance of hangedman-game
+-  Use the method initHangedMan(category, level) for create an instance of hangedman-game.
+
+```
+const hangedman = initHangedMan('1', '1');
+
+```
+4. ### Play
+- To play use the method play(letter) an re asign the instance with the result.
 
 
-# HANGEDMAN GAME
+```
+hangedman = hangedman.play('A');
+
+```
+
+5. ### Verify if is Winner
+- To verify if the play was win use the method isWinner(), return true if you win.
+
+```
+const isWinner = hangedman.isWinner();
+
+```
+
+6. ### Verify if is Lost
+- To verify if the play was lost use the method isLost(), return true if you lost, you lost when you quantity of attempts faileds are three or more.
+
+```
+const isLost = hangedman.isLost();
+
+```
+
+6. ### Verify quantity of attempts fails
+- To verify if the play was lost use the method isLost(), return true if you lost, you lost when you quantity of attempts fails are three or more.
+
+```
+const fails = hangedman.getAttemptsFiled();
+
+```
+
+## Class Diagram
+
+![classes](./image/diagram.png)
+
+# HANGEDMAN CONSOLE GAME 
 
 ## Installation
 

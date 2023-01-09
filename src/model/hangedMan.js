@@ -33,9 +33,9 @@ class HangedMan {
     }
 
     play = (letter) => {
-        const indexes = stringUtils.getListIndexPosition(this.#word, letter);
+        const indexes = stringUtils.getListIndexPosition(this.#word, letter.toUpperCase());
         if(indexes.length > 0) {
-          this.answer = arrayUtils.insertWordInArrayByIndexPosition(this.answer, letter, indexes);
+          this.answer = arrayUtils.insertWordInArrayByIndexPosition(this.answer, letter.toUpperCase(), indexes);
         } else {
             this.#addAttemptFiles();
         }

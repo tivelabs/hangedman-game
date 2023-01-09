@@ -1,6 +1,6 @@
 {
   "name": "@tive-labs/hangedman-game",
-  "version": "0.1.12",
+  "version": "0.1.14",
   "description": "## Installation",
   "type": "module",
   "main": "index.js",
