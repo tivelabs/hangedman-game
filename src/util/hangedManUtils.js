@@ -16,7 +16,7 @@ const hangedManUtils = {
     const levelName = optionUtils.getLevelNameByOption(level);
     const word = stringUtils.getRandomWordFromArray(arrayUtils.getItemsListByType(categoryName, levelName));
     const answer = arrayUtils.fillAnswerWithUnderscoreLetters(word);
-    return new HangedMan(word, answer, 0, true);
+    return new HangedMan(word, answer, 0);
   }
 };
 

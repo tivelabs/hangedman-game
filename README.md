@@ -38,27 +38,27 @@ hangedman = hangedman.play('A');
 
 ```
 
-5. ### Verify if is Winner
-- To verify if the play was win use the method isWinner(), return true if you win.
+5. ### Verify all status value
+- To verify all status value, run this method, will return this value:  { GAME_STARTED: 1, WON_GAME: 2, LOST_GAME: 3 }
 
 ```
-const isWinner = hangedman.isWinner();
-
-```
-
-6. ### Verify if is Lost
-- To verify if the play was lost use the method isLost(), return true if you lost, you lost when you quantity of attempts faileds are three or more.
-
-```
-const isLost = hangedman.isLost();
+const status = hangedman.getAllStatus();
 
 ```
 
-6. ### Verify quantity of attempts fails
+6. ### Verify the status game
+- To verify the status game, run this method.
+
+```
+const status = hangedman.getStatus();
+
+```
+
+7. ### Verify quantity of attempts fails
 - To verify if the play was lost use the method isLost(), return true if you lost, you lost when you quantity of attempts fails are three or more.
 
 ```
-const fails = hangedman.getAttemptsFiled();
+const fails = hangedman.getAttemptsFailed();
 
 ```
 

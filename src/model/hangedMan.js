@@ -1,3 +1,4 @@
+import status from "../helpers/status.js";
 import arrayUtils from "../util/arrayUtils.js";
 import stringUtils from "../util/stringUtils.js";
 
@@ -7,29 +8,25 @@ class HangedMan {
 
     #word;
     #attemptsFail;
-    #gameStarted;
 
-    constructor (word, answer, attemptsFail, gameStarted) {
+    constructor (word, answer, attemptsFail) {
         this.#word = word;
-        this.answer = answer;
         this.#attemptsFail = attemptsFail;
-        this.#gameStarted = gameStarted;
+        this.answer = answer;
+        this.status = status.GAME_STARTED;
     }
 
-    isWinner = () => {
+    getStatus = () => {
         const win = stringUtils.compareWords(this.#word, this.answer);
-        this.#gameStarted = !win;
-        return win;
-    }
-
-    isLost = () => {
+        if(win) {
+            this.status = status.WON_GAME;
+        }
         const lost = this.#attemptsFail >= ATTEMPTS_QUANTITY;
-        this.#gameStarted = !lost;
-        return lost;
-    }
+        if(lost) {
+            this.status = status.LOST_GAME;
+        }
 
-    isGameStarted = () => {
-        return this.#gameStarted;
+        return this.status;
     }
 
     play = (letter) => {
@@ -37,12 +34,12 @@ class HangedMan {
         if(indexes.length > 0) {
           this.answer = arrayUtils.insertWordInArrayByIndexPosition(this.answer, letter.toUpperCase(), indexes);
         } else {
-            this.#addAttemptFiles();
+            this.#addAttemptFail();
         }
         return this;
     }
 
-    #addAttemptFiles = () => {
+    #addAttemptFail = () => {
         this.#attemptsFail = this.#attemptsFail + 1;
     }
 
@@ -50,8 +47,12 @@ class HangedMan {
         return this.#word;
     }
 
-    getAttemptsFiled = () => {
+    getAttemptsFailed = () => {
         return this.#attemptsFail;
+    }
+
+    getAllStatus = () => {
+        return status;
     }
 }
 

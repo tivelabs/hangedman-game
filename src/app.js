@@ -1,5 +1,6 @@
 import inputs from './helpers/inputs';
 import messages from './helpers/messages';
+import status from './helpers/status';
 import hangedManUtils from './util/hangedManUtils';
 import optionUtils from './util/optionUtils';
 
@@ -24,22 +25,19 @@ const main = async() => {
     }
 
     do {
-        if(hangedMan && hangedMan.isGameStarted()) {
-            messages.showUnderscore(hangedMan.answer, hangedMan.getAttemptsFiled());
+        if(hangedMan && hangedMan.getStatus() === status.GAME_STARTED) {
+            messages.showUnderscore(hangedMan.answer, hangedMan.getAttemptsFailed());
             const letter = await inputs.insertLetter();
             hangedMan.play(letter);
-            if(!hangedMan.isWinner()) {
-                hangedMan.isLost();
-            }
         }
-    } while(hangedMan && hangedMan.isGameStarted());
+    } while(hangedMan && hangedMan.getStatus() === status.GAME_STARTED);
 
-    if(hangedMan && hangedMan.isWinner()) {
+    if(hangedMan && hangedMan.getStatus() === status.WON_GAME) {
         messages.showWinnerMessage(hangedMan.answer);
     }
 
-    if(hangedMan && hangedMan.isLost()) {
-        messages.showLoserMessage(hangedMan.answer, hangedMan.getAttemptsFiled(), hangedMan.getWord());
+    if(hangedMan && hangedMan.getStatus() === status.LOST_GAME) {
+        messages.showLoserMessage(hangedMan.answer, hangedMan.getAttemptsFailed(), hangedMan.getWord());
     }
     
 }
