@@ -1,0 +1,32 @@
+{
+  "name": "@tive-labs/hangedman-game",
+  "version": "0.1.16",
+  "description": "## Installation",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_OPTIONS='--experimental-specifier-resolution=node' node src/app.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Nataly Nanda Huanca Patzi",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.20.11",
+    "jest": "^29.3.1"
+  },
+  "dependencies": {
+    "colors": "^1.4.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tivelabs/hangedman-game.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tivelabs/hangedman-game/issues"
+  },
+  "homepage": "https://github.com/tivelabs/hangedman-game#readme"
+}
